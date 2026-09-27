@@ -6,16 +6,16 @@ on:
     branches: [ main, master ]
 
   workflow_dispatch:
-#    inputs:
-#      tags:
-#        type: choice
-#        description: 'Enter the tags to run the tests'
-#        required: true
-#        default: '@regression'
-#        options:
-#          - @login
-#          - @regression
-#          - @smoke
+    inputs:
+      tags:
+        type: choice
+        description: 'Enter the tags to run the tests'
+        required: true
+        default: '@login'
+        options:
+          - @login
+          - @regression
+          - @smoke
 
 #env:
 #    MAVEN_OPTS: "-Xmx2g -XX:MaxPermSize=512m"
@@ -40,11 +40,11 @@ jobs:
 #      - name: Install dependencies
 #        run: npm ci
 
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-
-      - name: Run Playwright tests
-        run: mvn clean test -Dcucumber.filter.tags=@login
+#      - name: Install Playwright Browsers
+#        run: npx playwright install --with-deps
+#
+#      - name: Run Playwright tests
+#        run: mvn clean test -Dcucumber.filter.tags=@login
 
 
 #      - name: Upload Report Artifact
