@@ -6,16 +6,16 @@ on:
     branches: [ main, master ]
 
   workflow_dispatch:
-    inputs:
-      tags:
-        type: choice
-        description: 'Enter the tags to run the tests'
-        required: true
-        default: '@regression'
-        options:
-          - @login
-          - @regression
-          - @smoke
+#    inputs:
+#      tags:
+#        type: choice
+#        description: 'Enter the tags to run the tests'
+#        required: true
+#        default: '@regression'
+#        options:
+#          - @login
+#          - @regression
+#          - @smoke
 
 env:
     MAVEN_OPTS: "-Xmx2g -XX:MaxPermSize=512m"
