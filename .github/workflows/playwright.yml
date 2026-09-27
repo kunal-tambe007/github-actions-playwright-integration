@@ -11,11 +11,11 @@ on:
         type: choice
         description: 'Select the target environment'
         required: true
-        default: 'staging'
+        default: '@login'
         options:
-          - development
-          - staging
-          - production
+          - @login
+          - @regression
+          - @smoke
 
 #env:
 #    MAVEN_OPTS: "-Xmx2g -XX:MaxPermSize=512m"
@@ -40,11 +40,11 @@ jobs:
 #      - name: Install dependencies
 #        run: npm ci
 
-#      - name: Install Playwright Browsers
-#        run: npx playwright install --with-deps
-#
-#      - name: Run Playwright tests
-#        run: mvn clean test -Dcucumber.filter.tags=@login
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: mvn clean test -Dcucumber.filter.tags=${{ inputs.environment }}
 
 
 #      - name: Upload Report Artifact
