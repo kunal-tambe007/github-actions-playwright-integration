@@ -42,7 +42,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: mvn clean test -Dcucumber.filter.tags= ${{ inputs.tags }}
+        run: mvn clean test -Dcucumber.filter.tags=${{ inputs.tags }}
 
 #      - name: Upload Report Artifact
 #        uses: actions/upload-artifact@v4
