@@ -40,6 +40,7 @@ public class LoginSteps {
     public void verifyProductsPage() {
         //assertTrue(page.isVisible(".inventory_list")); //Checks of inventory list is visible
         System.out.println("TITLE IS ---> " + page.title());
+        System.out.println("URL is " + page.url());
     }
 
     @After
