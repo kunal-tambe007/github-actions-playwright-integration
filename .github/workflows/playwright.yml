@@ -7,15 +7,15 @@ on:
 
   workflow_dispatch:
     inputs:
-      tags:
+      environment:
         type: choice
-        description: 'Enter the tags to run the tests'
+        description: 'Select the target environment'
         required: true
-        default: '@login'
+        default: 'staging'
         options:
-          - @login
-          - @regression
-          - @smoke
+          - development
+          - staging
+          - production
 
 #env:
 #    MAVEN_OPTS: "-Xmx2g -XX:MaxPermSize=512m"
@@ -34,7 +34,7 @@ jobs:
 
       - name: Print Variables
         #run: echo "${{vars.PLAYWRIGHT}} This will print in console using maven opts variable"
-        run: echo ${{ inputs.tags }}
+        run: echo "${{ inputs.environment }}"
 
 
 #      - name: Install dependencies
