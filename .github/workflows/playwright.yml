@@ -6,9 +6,9 @@ on:
     branches: [ main, master ]
 
   workflow_dispatch:
-
     inputs:
       tags:
+        type: choice
         description: 'Enter the tags to run the tests'
         required: true
         default: '@regression'
