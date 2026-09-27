@@ -6,16 +6,16 @@ on:
     branches: [ main, master ]
 
   workflow_dispatch:
-    inputs:
-      environment:
-        type: choice
-        description: 'Select the target environment'
-        required: true
-        default: 'staging'
-        options:
-          - development
-          - staging
-          - production
+#    inputs:
+#      environment:
+#        type: choice
+#        description: 'Select the target environment'
+#        required: true
+#        default: 'staging'
+#        options:
+#          - development
+#          - staging
+#          - production
 
 #env:
 #    MAVEN_OPTS: "-Xmx2g -XX:MaxPermSize=512m"
