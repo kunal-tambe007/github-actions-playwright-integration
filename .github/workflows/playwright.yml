@@ -17,8 +17,8 @@ on:
 #          - @regression
 #          - @smoke
 
-env:
-    MAVEN_OPTS: "-Xmx2g -XX:MaxPermSize=512m"
+#env:
+#    MAVEN_OPTS: "-Xmx2g -XX:MaxPermSize=512m"
 
 jobs:
   Paywright-Tests:
