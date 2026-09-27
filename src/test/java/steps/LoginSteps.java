@@ -15,7 +15,8 @@ public class LoginSteps {
     @Before //Hook - runs before each scenario
     public void setUp() {
         playwright = Playwright.create(); //Initializes Playwright engine
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false)); //Launches a visible Chromium Browser
+        //browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false)); //Launches a visible Chromium Browser
+        browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
         page = browser.newPage(); //opens a new Browser Tab
     }
 
