@@ -23,7 +23,7 @@ jobs:
           node-version: lts/*
 
       - name: Print Variables
-        run: echo "$MAVEN_OPTS"
+        run: echo "$MAVEN_OPTS $JAVA_HOME $PATH"
 
 #      - name: Install dependencies
 #        run: npm ci
