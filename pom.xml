@@ -41,5 +41,14 @@
             <version>4.13.2</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version> <!-- or the latest -->
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
