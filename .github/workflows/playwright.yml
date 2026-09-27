@@ -13,9 +13,9 @@ on:
         required: true
         default: '@login'
         options:
-          - @login
-          - @regression
-          - @smoke
+          - '@login'
+          - '@regression'
+          - '@smoke'
 
 #env:
 #    MAVEN_OPTS: "-Xmx2g -XX:MaxPermSize=512m"
@@ -44,7 +44,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: mvn clean test -Dcucumber.filter.tags="@${{ inputs.environment }}"
+        run: mvn clean test -Dcucumber.filter.tags="${{ inputs.environment }}"
 
 
 #      - name: Upload Report Artifact
