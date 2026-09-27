@@ -11,7 +11,7 @@ on:
         type: choice
         description: 'Select the target environment'
         required: true
-        default: '@login'
+        #default: '@login'
         options:
           - @login
           - @regression
