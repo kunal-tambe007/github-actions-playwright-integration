@@ -16,6 +16,12 @@ on:
           - '@login'
           - '@regression'
           - '@smoke'
+      enable_debug:
+        description: 'Enable Debug Logging'
+        type: boolean
+        required: false
+        default: false
+
 
 #env:
 #    MAVEN_OPTS: "-Xmx2g -XX:MaxPermSize=512m"
