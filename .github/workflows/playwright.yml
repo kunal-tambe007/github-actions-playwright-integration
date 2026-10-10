@@ -17,9 +17,12 @@ on:
           - '@regression'
           - '@smoke'
 
-      if: ${{ inputs.environment == 'login' }}
+
       enable_debug:
+        if: ${{ inputs.environment == 'production' }}
         description: 'Enable Debug Logging'
+        else:
+            description: 'Enable Debug Logging (only available for production environment)'
         type: boolean
         required: false
         default: false
