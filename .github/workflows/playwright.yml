@@ -17,7 +17,6 @@ on:
           - '@regression'
           - '@smoke'
 
-      if: ${{ inputs.environment == 'login' }}
       enable_debug:
         description: 'Enable Debug Logging'
         type: boolean
